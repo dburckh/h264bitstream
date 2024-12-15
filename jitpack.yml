@@ -1,4 +1,5 @@
+# Order is important here. sdkmanager requires the default JVM, but AGP requires Java 17
 before_install:
-  - yes | sdkmanager --install "cmake;3.31.1"
+  - yes | sdkmanager --install "cmake;3.30.3"
   - sdk install java 17.0.12-oracle
   - sdk use java 17.0.12-oracle
