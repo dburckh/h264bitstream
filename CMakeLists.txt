@@ -43,13 +43,13 @@ target_include_directories(h264bitstream
 #target_sources(h264bitstream
 #	PUBLIC FILE_SET headers TYPE HEADERS FILES ${HEADERS}
 #)
-target_link_libraries(h264bitstream PRIVATE compile_options)
+#target_link_libraries(h264bitstream PRIVATE compile_options)
 
-add_executable(h264_analyze h264_analyze.c)
-target_link_libraries(h264_analyze PRIVATE compile_options h264bitstream)
+#add_executable(h264_analyze h264_analyze.c)
+#target_link_libraries(h264_analyze PRIVATE compile_options h264bitstream)
 
-add_executable(svc_split svc_split.c)
-target_link_libraries(svc_split PRIVATE compile_options h264bitstream)
+#add_executable(svc_split svc_split.c)
+#target_link_libraries(svc_split PRIVATE compile_options h264bitstream)
 
 #install(TARGETS h264bitstream h264_analyze svc_split
 #	FILE_SET headers

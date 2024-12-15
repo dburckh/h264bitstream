@@ -10,7 +10,11 @@ android {
 
     defaultConfig {
         minSdk = 21
-
+        externalNativeBuild {
+            cmake {
+                arguments.add("-DANDROID_STL=none")
+            }
+        }
     }
     buildFeatures {
         prefab = true
