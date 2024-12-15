@@ -25,9 +25,7 @@ android {
     externalNativeBuild {
         cmake {
             path("CMakeLists.txt")
-            // Needs to be 3.23+
-            // Set this in local.properties for compatibility with JitPack.io
-            //cmake.dir=C\:\\Android\\Sdk\\cmake\\3.31.1
+            version = "3.31.1"
         }
     }
     publishing {
