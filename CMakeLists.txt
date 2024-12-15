@@ -29,13 +29,6 @@ set(SOURCES
 	h264_stream.c
 )
 
-set(HEADERS
-	bs.h
-	h264_avcc.h
-	h264_sei.h
-	h264_stream.h
-)
-
 # These do not participate in build -- for now...
 set(ADDITIONALS
 	h264_avcc.c
@@ -43,7 +36,11 @@ set(ADDITIONALS
 	h264_slice_data.h
 )
 
-add_library(h264bitstream ${SOURCES} ${HEADERS})
+add_library(h264bitstream SHARED ${SOURCES})
+target_include_directories(h264bitstream
+		PUBLIC
+		include/
+)
 target_sources(h264bitstream
 	PUBLIC FILE_SET headers TYPE HEADERS FILES ${HEADERS}
 )
